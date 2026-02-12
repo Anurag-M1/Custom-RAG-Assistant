@@ -4,7 +4,7 @@ A Streamlit-based RAG app that lets you chat with your own documents using:
 - Qdrant (vector database)
 - FastEmbed (embeddings)
 - Groq (LLM)
-- 
+  
 <img width="1456" height="792" alt="CRA" src="https://github.com/user-attachments/assets/5cc34025-286d-414c-b2c3-823f27a5b6c0" />
 
 ## Features
@@ -13,7 +13,7 @@ A Streamlit-based RAG app that lets you chat with your own documents using:
 - Works with `.txt`, `.md`, `.pdf`, `.json`, `.csv`
 - Configurable embedding model and LLM via `.env`
 - Handles common retrieval issues (timeouts, model-dimension mismatch hints)
-- 
+  
 <img width="575" height="728" alt="RaG GpT" src="https://github.com/user-attachments/assets/dd3e6d0b-8a94-457e-abf0-b8d9203eccb8" />
 
 ## Project Files
@@ -94,32 +94,3 @@ streamlit run "/Users/anurag/Desktop/RaG GpT/app.py"
 Designed and developed by **Anurag Singh**  
 GitHub: [github.com/Anurag-M1](https://github.com/Anurag-M1)  
 Instagram: [instagram.com/ca_anuragsingh](https://instagram.com/ca_anuragsingh)
-
-## Deploy on Render
-
-If Render uses Python 3.14, this project will fail to install dependencies.
-This repo now pins Python 3.11 in three places: `.python-version`, `render.yaml`, and `runtime.txt`.
-
-### Option 1 (recommended)
-Use `render.yaml` from this repo.
-
-### Option 2 (manual Render settings)
-1. Set environment variable `PYTHON_VERSION=3.11.11`
-2. Build command:
-   `pip install --upgrade pip && pip install -r requirements.txt`
-3. Start command:
-   `streamlit run app.py --server.port $PORT --server.address 0.0.0.0`
-
-### Required environment variables on Render
-- `GROQ_API_KEY`
-- `QDRANT_URL`
-- `QDRANT_API_KEY`
-
-Optional defaults already defined in `render.yaml`:
-- `QDRANT_COLLECTION`
-- `ASSISTANT_DOMAIN`
-- `EMBEDDING_MODEL`
-- `GROQ_MODEL`
-- `QDRANT_PREFER_GRPC`
-- `QDRANT_TIMEOUT_SECONDS`
-- `APP_TITLE`
