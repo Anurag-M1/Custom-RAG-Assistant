@@ -97,8 +97,8 @@ Instagram: [instagram.com/ca_anuragsingh](https://instagram.com/ca_anuragsingh)
 
 ## Deploy on Render
 
-If Render uses Python 3.14, dependency installation may fail (for example `jiter` trying to build from source).
-This repo includes deployment config to force Python 3.11.
+If Render uses Python 3.14, this project will fail to install dependencies.
+This repo now pins Python 3.11 in three places: `.python-version`, `render.yaml`, and `runtime.txt`.
 
 ### Option 1 (recommended)
 Use `render.yaml` from this repo.
