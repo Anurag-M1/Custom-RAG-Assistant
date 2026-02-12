@@ -4,6 +4,8 @@ A Streamlit-based RAG app that lets you chat with your own documents using:
 - Qdrant (vector database)
 - FastEmbed (embeddings)
 - Groq (LLM)
+- 
+<img width="1456" height="792" alt="CRA" src="https://github.com/user-attachments/assets/5cc34025-286d-414c-b2c3-823f27a5b6c0" />
 
 ## Features
 
@@ -11,6 +13,8 @@ A Streamlit-based RAG app that lets you chat with your own documents using:
 - Works with `.txt`, `.md`, `.pdf`, `.json`, `.csv`
 - Configurable embedding model and LLM via `.env`
 - Handles common retrieval issues (timeouts, model-dimension mismatch hints)
+- 
+<img width="575" height="728" alt="RaG GpT" src="https://github.com/user-attachments/assets/dd3e6d0b-8a94-457e-abf0-b8d9203eccb8" />
 
 ## Project Files
 
