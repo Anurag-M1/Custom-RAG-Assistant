@@ -4,6 +4,7 @@ A Streamlit-based RAG app that lets you chat with your own documents using:
 - Qdrant (vector database)
 - FastEmbed (embeddings)
 - Groq (LLM)
+- live : https://custom-rag-assistant.onrender.com
   
 <img width="1456" height="792" alt="CRA" src="https://github.com/user-attachments/assets/5cc34025-286d-414c-b2c3-823f27a5b6c0" />
 
