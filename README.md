@@ -94,3 +94,32 @@ streamlit run "/Users/anurag/Desktop/RaG GpT/app.py"
 Designed and developed by **Anurag Singh**  
 GitHub: [github.com/Anurag-M1](https://github.com/Anurag-M1)  
 Instagram: [instagram.com/ca_anuragsingh](https://instagram.com/ca_anuragsingh)
+
+## Deploy on Render
+
+If Render uses Python 3.14, dependency installation may fail (for example `jiter` trying to build from source).
+This repo includes deployment config to force Python 3.11.
+
+### Option 1 (recommended)
+Use `render.yaml` from this repo.
+
+### Option 2 (manual Render settings)
+1. Set environment variable `PYTHON_VERSION=3.11.11`
+2. Build command:
+   `pip install --upgrade pip && pip install -r requirements.txt`
+3. Start command:
+   `streamlit run app.py --server.port $PORT --server.address 0.0.0.0`
+
+### Required environment variables on Render
+- `GROQ_API_KEY`
+- `QDRANT_URL`
+- `QDRANT_API_KEY`
+
+Optional defaults already defined in `render.yaml`:
+- `QDRANT_COLLECTION`
+- `ASSISTANT_DOMAIN`
+- `EMBEDDING_MODEL`
+- `GROQ_MODEL`
+- `QDRANT_PREFER_GRPC`
+- `QDRANT_TIMEOUT_SECONDS`
+- `APP_TITLE`

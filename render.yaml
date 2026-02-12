@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: custom-rag-assistant
+    env: python
+    plan: free
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
+    startCommand: streamlit run app.py --server.port $PORT --server.address 0.0.0.0
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.11
+      - key: GROQ_API_KEY
+        sync: false
+      - key: QDRANT_URL
+        sync: false
+      - key: QDRANT_API_KEY
+        sync: false
+      - key: QDRANT_COLLECTION
+        value: indian_constitution
+      - key: ASSISTANT_DOMAIN
+        value: Indian Constitution
+      - key: EMBEDDING_MODEL
+        value: sentence-transformers/all-MiniLM-L6-v2
+      - key: GROQ_MODEL
+        value: llama-3.3-70b-versatile
+      - key: QDRANT_PREFER_GRPC
+        value: "false"
+      - key: QDRANT_TIMEOUT_SECONDS
+        value: "30"
+      - key: APP_TITLE
+        value: Custom RAG Assistant
